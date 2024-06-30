@@ -65,6 +65,10 @@ const Customizer = () => {
 
       const data = await response.json();
 
+      if (!data.photo) {
+        throw new Error('No photo data found in the response');
+      }
+
       handleDecals(type, `data:image/png;base64,${data.photo}`)
     } catch (error) {
       alert(error)
