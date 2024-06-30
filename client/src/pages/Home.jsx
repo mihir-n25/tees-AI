@@ -10,6 +10,8 @@ import {
   slideAnimation
 } from '../config/motion';
 
+import { getContrastingColor } from '../config/helpers';
+
 const Home = () => {
   const snap = useSnapshot(state);
 
@@ -28,7 +30,7 @@ const Home = () => {
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
               <h1 className="text-7xl font-medium">
-                Customize <br className="xl:block hidden" /> With <span className='font-semibold'>TEES-AI</span>
+                Customize <br className="xl:block hidden" /> With <span className='font-semibold' style={{color: getContrastingColor(snap.color)}}>TEES-AI</span>
               </h1>
             </motion.div>
             <motion.div
