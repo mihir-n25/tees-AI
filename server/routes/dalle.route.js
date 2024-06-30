@@ -1,9 +1,15 @@
 import express from "express"
 
-import * as otenv from "dotenv";
-import {Configuration , OpenAiApi} from 'openai'
+import * as dotenv from "dotenv";
+// import { OpenAIApi} from 'openai'
 
 dotenv.config();
 
 const router = express.Router();
+
+router.route('/').get((req,res) => {
+    res.status(200).json({message : "hello from DallE routes"})
+})
+
+export default router;
 
