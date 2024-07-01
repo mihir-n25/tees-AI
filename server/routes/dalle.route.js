@@ -12,7 +12,7 @@ const openai = new OpenAI({
   });
 
 router.route('/').get((req,res) => {
-    res.status(200).json({message : "hello from DallE routes"})
+    res.status(200).json({message : "hello from Dall-E routes"})
 })
 
 router.route('/').post(async(req,res) => {
